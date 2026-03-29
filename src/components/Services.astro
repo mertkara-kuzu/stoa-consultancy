@@ -1,0 +1,93 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const i = t(locale);
+
+const icons: Record<string, string> = {
+  passport: '🛂',
+  clipboard: '📋',
+  home: '🏡',
+  graduation: '🎓',
+  building: '🏢',
+  sparkles: '✨',
+};
+---
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-label reveal">{i.services.label}</div>
+    <div class="section-title reveal">{i.services.title_1}<br/>{i.services.title_2}</div>
+    <div class="section-desc reveal">{i.services.desc}</div>
+
+    <div class="services-grid">
+      {i.services.items.map((svc) => (
+        <div class="service-card reveal">
+          <div class="service-icon">{icons[svc.icon] || '◆'}</div>
+          <h3>{svc.title}</h3>
+          <p>{svc.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .service-card {
+    background: var(--bg-card);
+    padding: 44px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s var(--ease);
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  .service-card:hover { background: var(--bg-card2); }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 48px; height: 48px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    background: var(--gold-glow);
+    transition: all .4s;
+  }
+  .service-card:hover .service-icon {
+    background: var(--gold-dim);
+    border-color: rgba(201,162,78,.3);
+  }
+  .service-card h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: .88rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  @media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+</style>

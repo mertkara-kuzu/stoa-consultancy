@@ -1,0 +1,139 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section class="hero">
+  <div class="hero-bg-line"></div>
+  <div class="hero-bg-line"></div>
+  <div class="hero-bg-line"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">{i.hero.tag}</div>
+      <h1>{i.hero.title_1}<br/>{i.hero.title_2} <em>{i.hero.title_em}</em></h1>
+      <p class="hero-desc">{i.hero.desc}</p>
+      <div class="hero-actions">
+        <a href={`/${locale}/#contact`} class="btn btn-primary">{i.hero.cta_primary}</a>
+        <a href={`/${locale}/#services`} class="btn btn-ghost">{i.hero.cta_secondary}</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>{i.hero.scroll}</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 50%, rgba(201,162,78,.06) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 30%, rgba(201,162,78,.04) 0%, transparent 70%);
+  }
+  .hero-bg-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent 0%, var(--border) 30%, var(--border) 70%, transparent 100%);
+  }
+  .hero-bg-line:nth-child(1) { left: 20%; }
+  .hero-bg-line:nth-child(2) { left: 50%; }
+  .hero-bg-line:nth-child(3) { left: 80%; }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp .8s var(--ease) .2s forwards;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp .8s var(--ease) .4s forwards;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 44px;
+    opacity: 0;
+    animation: fadeUp .8s var(--ease) .6s forwards;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeUp .8s var(--ease) .8s forwards;
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s var(--ease) 1.2s forwards;
+  }
+  .scroll-hint span {
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero-desc { font-size: .95rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+  }
+</style>

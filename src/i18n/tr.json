@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "STOA Consultancy — İtalya & Türkiye",
+    "description": "İtalya ile Türkiye arasında premium danışmanlık hizmetleri. Vize, oturma izni, yatırım, gayrimenkul, eğitim, concierge."
+  },
+  "nav": {
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "clients": "Müşteriler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "tag": "İtalya & Türkiye — Premium Danışmanlık",
+    "title_1": "İtalya ile Türkiye'nin",
+    "title_2": "buluştuğu yerde,",
+    "title_em": "fırsat doğar.",
+    "desc": "Stoa Consultancy, İtalya–Türkiye koridorunda bireylere, ailelere ve işletmelere rehberlik eder. Vize, oturma izni, yatırım, gayrimenkul, eğitim ve concierge hizmetleri — gizlilik ve uzmanlıkla.",
+    "cta_primary": "Danışmanlık Talep Edin",
+    "cta_secondary": "Hizmetleri Keşfedin",
+    "scroll": "Keşfet"
+  },
+  "stats": {
+    "trade": "İkili ticaret hacmi",
+    "agreements": "2025'te imzalanan yeni anlaşma",
+    "golden_visa": "İtalya Golden Visa — minimum",
+    "citizenship": "Yatırımla Türk vatandaşlığı"
+  },
+  "services": {
+    "label": "Hizmetlerimiz",
+    "title_1": "Koridor boyunca her ihtiyaca",
+    "title_2": "özel çözümler.",
+    "desc": "İtalya ile Türkiye arasında hareket eden herkes için eksiksiz bir profesyonel hizmet ekosistemi sunuyoruz — ilk danışmanlıktan kalıcı yerleşime kadar.",
+    "items": [
+      {
+        "icon": "passport",
+        "title": "Vize & Giriş",
+        "desc": "Schengen vizesi, D tipi ulusal vize ve Türkiye e-Vize süreçlerinin eksiksiz yönetimi. Her aşamada belge hazırlığı ve rehberlik."
+      },
+      {
+        "icon": "clipboard",
+        "title": "Çalışma & Oturma İzni",
+        "desc": "Decreto Flussi, oturma izni başvuruları ve yenilemeler. Türkiye için: çalışma izni, kısa ve uzun süreli ikamet, aile birleşimi."
+      },
+      {
+        "icon": "home",
+        "title": "Gayrimenkul & Yatırım",
+        "desc": "İtalya ve Türkiye'de gayrimenkul alımı. Due diligence, vergilendirme, yabancı alıcılar için KDV muafiyeti, yatırımla vatandaşlık."
+      },
+      {
+        "icon": "graduation",
+        "title": "Eğitim & Burslar",
+        "desc": "Üniversite yönlendirmesi, İtalyan ve Türk burs başvuruları, Bologna çerçevesinde diploma tanıma süreçleri."
+      },
+      {
+        "icon": "building",
+        "title": "Şirket Kuruluşu",
+        "desc": "İtalya'da SRL ve Türkiye'de Ltd. Şti. kuruluşu. Vergi kayıtları, şirket danışmanlığı, hedef pazarda operasyonel destek."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Concierge & Taşınma",
+        "desc": "Konut arama, banka hesabı açma, sağlık kaydı, çocuklar için okul, kültürel ve dil oryantasyonu. White-glove hizmet."
+      }
+    ]
+  },
+  "about": {
+    "label": "Hakkımızda",
+    "title_1": "İkili deneyimden",
+    "title_2": "doğan uzmanlık.",
+    "desc": "Stoa Consultancy, farklı kurallarla yönetilen ancak büyük bir sinerji potansiyeline sahip iki ülke arasında hareket eden profesyonellerin, yatırımcıların ve ailelerin somut ihtiyaçlarından doğmuştur. Ekibimiz her iki kıyıda da faaliyet göstermektedir — ofisler, hukuki ortaklar ve köklü kurumsal ağlarla.",
+    "quote": "Stoa, medeniyetlerin ticaret yapmak, diyalog kurmak ve inşa etmek için buluştuğu yerdi. Hâlâ öyle.",
+    "features": [
+      {
+        "icon": "globe",
+        "title": "Üç Dilli",
+        "desc": "İtalyanca, Türkçe ve İngilizce olarak hizmet veriyoruz — dil engeli olmadan."
+      },
+      {
+        "icon": "scale",
+        "title": "İkili Hukuk Ağı",
+        "desc": "İtalya ve Türkiye'de göçmenlik hukuku alanında uzmanlaşmış hukuki ortaklar."
+      },
+      {
+        "icon": "handshake",
+        "title": "Mutlak Gizlilik",
+        "desc": "Her dosya en üst düzey gizlilikle yönetilir — özellikle HNWI ve kurumsal müşteriler için."
+      }
+    ]
+  },
+  "clients": {
+    "label": "Müşterilerimiz",
+    "title_1": "İki dünya arasında",
+    "title_2": "hareket edenler için.",
+    "italian_title": "İtalyan Müşteriler",
+    "italian_list": [
+      "Türkiye'de iş kuran girişimciler",
+      "Gayrimenkul yatırımcıları ve Türk vatandaşlığı",
+      "Taşınan emekliler ve aileler",
+      "Türkiye'de üniversite öğrencileri",
+      "İstanbul veya Ankara'da şubesi olan şirketler"
+    ],
+    "turkish_title": "Türk Müşteriler",
+    "turkish_list": [
+      "Yüksek net değerli bireyler ve İtalya Golden Visa",
+      "Çalışma izni arayan profesyoneller",
+      "İtalya'ya yönelik öğrenciler ve bursiyerler",
+      "Aileler ve aile birleşimi",
+      "AB pazarına yönelik ihracat yöneticileri ve işletmeler"
+    ]
+  },
+  "contact": {
+    "label": "İletişim",
+    "title_1": "Projenizi",
+    "title_2": "konuşalım.",
+    "desc": "Her yolculuk bir sohbetle başlar. Formu doldurun veya doğrudan bize ulaşın — 24 saat içinde yanıt veriyoruz.",
+    "offices": "Ofisler",
+    "hours": "Çalışma Saatleri",
+    "hours_value": "Pzt – Cum: 09:00 – 18:00 (CET / TRT)",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "nationality": "Uyruk",
+      "nationality_select": "Seçiniz",
+      "nationality_it": "İtalyan",
+      "nationality_tr": "Türk",
+      "nationality_other": "Diğer",
+      "service": "İlgilendiğiniz Hizmet",
+      "service_select": "Seçiniz",
+      "service_visa": "Vize & İzinler",
+      "service_property": "Gayrimenkul & Yatırım",
+      "service_education": "Eğitim & Burslar",
+      "service_business": "Şirket Kuruluşu",
+      "service_concierge": "Concierge & Taşınma",
+      "service_golden": "Golden Visa / Vatandaşlık",
+      "message": "Mesajınız",
+      "message_placeholder": "Projenizi veya ihtiyacınızı kısaca açıklayınız...",
+      "submit": "Talebi Gönder",
+      "success": "Teşekkürler! 24 saat içinde sizinle iletişime geçeceğiz."
+    }
+  },
+  "footer": {
+    "privacy": "Gizlilik Politikası",
+    "terms": "Şartlar ve Koşullar"
+  }
+}

@@ -1,0 +1,59 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">STOA</div>
+      <div class="footer-copy">&copy; {new Date().getFullYear()} Stoa Consultancy. All rights reserved.</div>
+      <ul class="footer-links">
+        <li><a href={`/${locale}/privacy`}>{i.footer.privacy}</a></li>
+        <li><a href={`/${locale}/terms`}>{i.footer.terms}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 0;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    color: var(--gold);
+  }
+  .footer-copy {
+    font-size: .78rem;
+    color: var(--text-muted);
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: .78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color .3s;
+  }
+  .footer-links a:hover { color: var(--gold-light); }
+  @media (max-width: 768px) {
+    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  }
+</style>

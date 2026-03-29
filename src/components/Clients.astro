@@ -1,0 +1,105 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section class="section" id="clients">
+  <div class="container">
+    <div class="section-label reveal">{i.clients.label}</div>
+    <div class="section-title reveal">{i.clients.title_1}<br/>{i.clients.title_2}</div>
+
+    <div class="serve-grid">
+      <!-- Italian Clients -->
+      <div class="serve-col reveal">
+        <div class="serve-flag">
+          <div class="serve-flag-icon flag-it">
+            <div class="stripe"></div>
+            <div class="stripe"></div>
+            <div class="stripe"></div>
+          </div>
+          <h3>{i.clients.italian_title}</h3>
+        </div>
+        <ul class="serve-list">
+          {i.clients.italian_list.map((item) => (
+            <li><span class="serve-dot"></span>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Turkish Clients -->
+      <div class="serve-col reveal">
+        <div class="serve-flag">
+          <div class="serve-flag-icon flag-tr"></div>
+          <h3>{i.clients.turkish_title}</h3>
+        </div>
+        <ul class="serve-list">
+          {i.clients.turkish_list.map((item) => (
+            <li><span class="serve-dot"></span>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .serve-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 56px;
+  }
+  .serve-col {
+    background: var(--bg-card);
+    padding: 48px 44px;
+  }
+  .serve-flag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .serve-flag-icon {
+    width: 40px; height: 28px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  }
+  .flag-it .stripe { flex: 1; }
+  .flag-it .stripe:nth-child(1) { background: #009246; }
+  .flag-it .stripe:nth-child(2) { background: #fff; }
+  .flag-it .stripe:nth-child(3) { background: #CE2B37; }
+  .flag-tr { background: #E30A17; }
+  .serve-flag h3 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .serve-list { list-style: none; }
+  .serve-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: .88rem;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .serve-list li:last-child { border-bottom: none; }
+  .serve-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .serve-grid { grid-template-columns: 1fr; }
+    .serve-col { padding: 36px 28px; }
+  }
+</style>

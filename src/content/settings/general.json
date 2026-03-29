@@ -1,0 +1,15 @@
+{
+  "siteName": "STOA Consultancy",
+  "email": "info@stoaconsultancy.com",
+  "phone": "+39 000 000 0000",
+  "offices": "Milano, Italia — Istanbul, Türkiye",
+  "hours": {
+    "it": "Lun – Ven: 09:00 – 18:00 (CET / TRT)",
+    "tr": "Pzt – Cum: 09:00 – 18:00 (CET / TRT)"
+  },
+  "social": {
+    "linkedin": "",
+    "instagram": "",
+    "twitter": ""
+  }
+}

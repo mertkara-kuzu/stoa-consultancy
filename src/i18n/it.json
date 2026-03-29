@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "STOA Consultancy — Italia & Turchia",
+    "description": "Servizi di consulenza premium tra Italia e Turchia. Visti, permessi, investimenti, immobili, istruzione, concierge."
+  },
+  "nav": {
+    "services": "Servizi",
+    "about": "Chi Siamo",
+    "clients": "Clienti",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "tag": "Italia & Turchia — Consulenza Premium",
+    "title_1": "Dove l'Italia incontra",
+    "title_2": "la Turchia,",
+    "title_em": "nasce l'opportunità.",
+    "desc": "Stoa Consultancy accompagna individui, famiglie e imprese nel corridoio Italia–Turchia. Visti, permessi, investimenti, immobili, istruzione e servizi concierge — con discrezione e competenza.",
+    "cta_primary": "Richiedi una Consulenza",
+    "cta_secondary": "Scopri i Servizi",
+    "scroll": "Scopri"
+  },
+  "stats": {
+    "trade": "Volume commerciale bilaterale",
+    "agreements": "Nuovi accordi firmati nel 2025",
+    "golden_visa": "Golden Visa Italia — minimo",
+    "citizenship": "Cittadinanza turca tramite investimento"
+  },
+  "services": {
+    "label": "I Nostri Servizi",
+    "title_1": "Soluzioni su misura per",
+    "title_2": "ogni esigenza del corridoio.",
+    "desc": "Offriamo un ecosistema completo di servizi professionali per chi si muove tra Italia e Turchia — dalla prima consulenza fino all'insediamento definitivo.",
+    "items": [
+      {
+        "icon": "passport",
+        "title": "Visti & Ingressi",
+        "desc": "Gestione completa di visti Schengen, visti nazionali di tipo D, e-Visa turco. Preparazione documentale e accompagnamento in ogni fase."
+      },
+      {
+        "icon": "clipboard",
+        "title": "Permessi di Lavoro & Soggiorno",
+        "desc": "Decreto Flussi, permesso di soggiorno, rinnovi. Per la Turchia: permessi di lavoro, residenza breve e lungo termine, ricongiungimento familiare."
+      },
+      {
+        "icon": "home",
+        "title": "Immobili & Investimenti",
+        "desc": "Acquisto immobiliare in Italia e Turchia. Due diligence, fiscalità, esenzioni IVA per compratori esteri, cittadinanza per investimento."
+      },
+      {
+        "icon": "graduation",
+        "title": "Istruzione & Borse di Studio",
+        "desc": "Orientamento universitario, candidature per borse di studio italiane e turche, riconoscimento titoli di studio nel quadro Bologna."
+      },
+      {
+        "icon": "building",
+        "title": "Costituzione Società",
+        "desc": "Creazione di SRL in Italia e Ltd. Şti. in Turchia. Registrazioni fiscali, consulenza societaria, supporto operativo nel mercato di destinazione."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Concierge & Relocation",
+        "desc": "Ricerca alloggio, apertura conto bancario, iscrizione sanitaria, scuole per i figli, orientamento culturale e linguistico. Servizio white-glove."
+      }
+    ]
+  },
+  "about": {
+    "label": "Chi Siamo",
+    "title_1": "La competenza che nasce",
+    "title_2": "dall'esperienza bilaterale.",
+    "desc": "Stoa Consultancy è nata dall'esigenza concreta di professionisti, investitori e famiglie che si muovono tra due paesi con regole diverse ma con un enorme potenziale di sinergia. Il nostro team opera su entrambe le sponde — con uffici, partner legali e una rete istituzionale consolidata.",
+    "quote": "La stoa era il luogo dove le civiltà si incontravano per commerciare, dialogare e costruire. È ancora così.",
+    "features": [
+      {
+        "icon": "globe",
+        "title": "Trilingue",
+        "desc": "Operiamo in italiano, turco e inglese — senza barriere linguistiche."
+      },
+      {
+        "icon": "scale",
+        "title": "Rete Legale Bilaterale",
+        "desc": "Partner legali specializzati in diritto dell'immigrazione in Italia e in Turchia."
+      },
+      {
+        "icon": "handshake",
+        "title": "Discrezione Assoluta",
+        "desc": "Ogni caso è gestito con la massima riservatezza — specialmente per clienti HNWI e corporate."
+      }
+    ]
+  },
+  "clients": {
+    "label": "I Nostri Clienti",
+    "title_1": "Per chi si muove",
+    "title_2": "tra due mondi.",
+    "italian_title": "Clienti Italiani",
+    "italian_list": [
+      "Imprenditori che aprono in Turchia",
+      "Investitori immobiliari e cittadinanza turca",
+      "Pensionati e famiglie in trasferimento",
+      "Studenti universitari in Turchia",
+      "Aziende con filiali a Istanbul o Ankara"
+    ],
+    "turkish_title": "Clienti Turchi",
+    "turkish_list": [
+      "HNWI e Golden Visa italiana",
+      "Professionisti con permesso di lavoro",
+      "Studenti e borsisti verso l'Italia",
+      "Famiglie e ricongiungimento familiare",
+      "Export manager e imprese verso il mercato UE"
+    ]
+  },
+  "contact": {
+    "label": "Contatti",
+    "title_1": "Parliamo del",
+    "title_2": "tuo progetto.",
+    "desc": "Ogni percorso inizia con una conversazione. Compila il modulo o contattaci direttamente — rispondiamo entro 24 ore.",
+    "offices": "Uffici",
+    "hours": "Orario",
+    "hours_value": "Lun – Ven: 09:00 – 18:00 (CET / TRT)",
+    "form": {
+      "name": "Nome e Cognome",
+      "email": "Email",
+      "nationality": "Nazionalità",
+      "nationality_select": "Seleziona",
+      "nationality_it": "Italiana",
+      "nationality_tr": "Turca",
+      "nationality_other": "Altra",
+      "service": "Servizio di Interesse",
+      "service_select": "Seleziona",
+      "service_visa": "Visti & Permessi",
+      "service_property": "Immobili & Investimenti",
+      "service_education": "Istruzione & Borse di Studio",
+      "service_business": "Costituzione Società",
+      "service_concierge": "Concierge & Relocation",
+      "service_golden": "Golden Visa / Cittadinanza",
+      "message": "Messaggio",
+      "message_placeholder": "Descrivi brevemente il tuo progetto o la tua esigenza...",
+      "submit": "Invia Richiesta",
+      "success": "Grazie! Vi contatteremo entro 24 ore."
+    }
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Termini e Condizioni"
+  }
+}

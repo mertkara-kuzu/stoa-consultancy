@@ -1,0 +1,129 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const i = t(locale);
+
+const featureIcons: Record<string, string> = {
+  globe: '🌐',
+  scale: '⚖️',
+  handshake: '🤝',
+};
+---
+
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-label reveal">{i.about.label}</div>
+        <div class="section-title reveal">{i.about.title_1}<br/>{i.about.title_2}</div>
+        <div class="section-desc reveal" style="margin-bottom:0;">{i.about.desc}</div>
+
+        <ul class="about-features">
+          {i.about.features.map((feat) => (
+            <li class="reveal">
+              <div class="feature-icon">{featureIcons[feat.icon] || '◆'}</div>
+              <div class="feature-text">
+                <strong>{feat.title}</strong>
+                <span>{feat.desc}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="about-visual reveal">
+        <div class="about-box">
+          <span class="about-quote-mark">"</span>
+          <div class="about-quote">{i.about.quote}</div>
+          <div class="about-author">— Stoa Consultancy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-features {
+    list-style: none;
+    margin-top: 48px;
+  }
+  .about-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .about-features li:last-child { border-bottom: none; }
+  .feature-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    flex-shrink: 0;
+    background: var(--gold-dim);
+    border: 1px solid rgba(201,162,78,.15);
+  }
+  .feature-text strong {
+    display: block;
+    font-size: .9rem;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+  .feature-text span {
+    font-size: .82rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .about-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 52px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-box::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 40px; right: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .about-quote-mark {
+    font-family: var(--serif);
+    font-size: 4rem;
+    color: var(--gold);
+    line-height: .5;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .about-quote {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .about-author {
+    font-size: .82rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: .06em;
+  }
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>

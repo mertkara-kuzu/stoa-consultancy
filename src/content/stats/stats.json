@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "value": "$32B+",
+      "label_it": "Volume commerciale bilaterale",
+      "label_tr": "İkili ticaret hacmi"
+    },
+    {
+      "value": "11",
+      "label_it": "Nuovi accordi firmati nel 2025",
+      "label_tr": "2025'te imzalanan yeni anlaşma"
+    },
+    {
+      "value": "€250K",
+      "label_it": "Golden Visa Italia — minimo",
+      "label_tr": "İtalya Golden Visa — minimum"
+    },
+    {
+      "value": "$400K",
+      "label_it": "Cittadinanza turca tramite investimento",
+      "label_tr": "Yatırımla Türk vatandaşlığı"
+    }
+  ]
+}

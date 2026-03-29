@@ -1,0 +1,196 @@
+# ═══════════════════════════════════════════════════════════
+# STOA Consultancy — Decap CMS Configuration
+# ═══════════════════════════════════════════════════════════
+
+backend:
+  name: git-gateway
+  branch: main
+
+# For local development, uncomment below:
+# local_backend: true
+
+publish_mode: editorial_workflow
+media_folder: "public/images"
+public_folder: "/images"
+
+# ── i18n Configuration ────────────────────────────────────
+i18n:
+  structure: multiple_folders
+  locales: [it, tr]
+  default_locale: it
+
+# ── Collections ───────────────────────────────────────────
+collections:
+
+  # ── Site Settings (singleton) ───────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    description: "Global site configuration"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "src/content/settings/general.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string", default: "STOA Consultancy" }
+          - { label: "Email", name: "email", widget: "string", default: "info@stoaconsultancy.com" }
+          - { label: "Phone / WhatsApp", name: "phone", widget: "string", default: "+39 000 000 0000" }
+          - { label: "Office Locations", name: "offices", widget: "string", default: "Milano, Italia — Istanbul, Türkiye" }
+          - label: "Working Hours"
+            name: "hours"
+            widget: "object"
+            fields:
+              - { label: "Italian", name: "it", widget: "string", default: "Lun – Ven: 09:00 – 18:00 (CET / TRT)" }
+              - { label: "Turkish", name: "tr", widget: "string", default: "Pzt – Cum: 09:00 – 18:00 (CET / TRT)" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Twitter / X", name: "twitter", widget: "string", required: false }
+
+  # ── Hero Section ────────────────────────────────────────
+  - name: "hero"
+    label: "Hero Section"
+    description: "Homepage hero content"
+    i18n: true
+    files:
+      - name: "hero"
+        label: "Hero Content"
+        file: "src/content/hero/hero.json"
+        i18n: true
+        fields:
+          - { label: "Tag Line", name: "tag", widget: "string", i18n: true }
+          - { label: "Title Line 1", name: "title_1", widget: "string", i18n: true }
+          - { label: "Title Line 2", name: "title_2", widget: "string", i18n: true }
+          - { label: "Title Emphasis (gold italic)", name: "title_em", widget: "string", i18n: true }
+          - { label: "Description", name: "desc", widget: "text", i18n: true }
+          - { label: "Primary CTA", name: "cta_primary", widget: "string", i18n: true }
+          - { label: "Secondary CTA", name: "cta_secondary", widget: "string", i18n: true }
+
+  # ── Services ────────────────────────────────────────────
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    description: "Consultancy service offerings"
+    folder: "src/content/services"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      - label: "Icon"
+        name: "icon"
+        widget: "select"
+        options:
+          - { label: "Passport (Visa)", value: "passport" }
+          - { label: "Clipboard (Permits)", value: "clipboard" }
+          - { label: "Home (Property)", value: "home" }
+          - { label: "Graduation (Education)", value: "graduation" }
+          - { label: "Building (Business)", value: "building" }
+          - { label: "Sparkles (Concierge)", value: "sparkles" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 0 }
+
+  # ── Stats / Key Numbers ─────────────────────────────────
+  - name: "stats"
+    label: "Stats Bar"
+    description: "Key corridor statistics displayed below the hero"
+    files:
+      - name: "stats"
+        label: "Statistics"
+        file: "src/content/stats/stats.json"
+        fields:
+          - label: "Stats"
+            name: "items"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number", name: "value", widget: "string" }
+              - { label: "Label (Italian)", name: "label_it", widget: "string" }
+              - { label: "Label (Turkish)", name: "label_tr", widget: "string" }
+
+  # ── About / Features ────────────────────────────────────
+  - name: "about"
+    label: "About Section"
+    description: "About the firm and key differentiators"
+    i18n: true
+    files:
+      - name: "about"
+        label: "About Content"
+        file: "src/content/about/about.json"
+        i18n: true
+        fields:
+          - { label: "Section Label", name: "label", widget: "string", i18n: true }
+          - { label: "Title Line 1", name: "title_1", widget: "string", i18n: true }
+          - { label: "Title Line 2", name: "title_2", widget: "string", i18n: true }
+          - { label: "Description", name: "desc", widget: "text", i18n: true }
+          - { label: "Quote", name: "quote", widget: "text", i18n: true }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            max: 4
+            i18n: true
+            fields:
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - { label: "Description", name: "desc", widget: "text", i18n: true }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options:
+                  - { label: "Globe (Languages)", value: "globe" }
+                  - { label: "Scale (Legal)", value: "scale" }
+                  - { label: "Handshake (Trust)", value: "handshake" }
+
+  # ── Client Profiles ─────────────────────────────────────
+  - name: "clients"
+    label: "Client Profiles"
+    description: "Who we serve — Italian and Turkish client segments"
+    i18n: true
+    files:
+      - name: "clients"
+        label: "Client Segments"
+        file: "src/content/clients/clients.json"
+        i18n: true
+        fields:
+          - { label: "Section Label", name: "label", widget: "string", i18n: true }
+          - { label: "Title Line 1", name: "title_1", widget: "string", i18n: true }
+          - { label: "Title Line 2", name: "title_2", widget: "string", i18n: true }
+          - { label: "Italian Clients Heading", name: "italian_title", widget: "string", i18n: true }
+          - label: "Italian Client Types"
+            name: "italian_list"
+            widget: "list"
+            i18n: true
+            field: { label: "Client Type", name: "item", widget: "string", i18n: true }
+          - { label: "Turkish Clients Heading", name: "turkish_title", widget: "string", i18n: true }
+          - label: "Turkish Client Types"
+            name: "turkish_list"
+            widget: "list"
+            i18n: true
+            field: { label: "Client Type", name: "item", widget: "string", i18n: true }
+
+  # ── Blog / Articles (optional, for SEO) ─────────────────
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Article"
+    description: "Articles and insights for SEO and thought leadership"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Visa & Permits", value: "visa" }
+          - { label: "Property & Investment", value: "property" }
+          - { label: "Education", value: "education" }
+          - { label: "Business", value: "business" }
+          - { label: "News", value: "news" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
